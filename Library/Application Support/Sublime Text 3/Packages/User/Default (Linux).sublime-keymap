@@ -1,0 +1,12 @@
+[
+  { "keys": ["ctrl+alt+i"], "command": "reindent" },
+  { "keys": ["ctrl+alt+w"], "command": "alignment" },
+  { "keys": ["ctrl+alt+ц"], "command": "alignment" },
+  { "keys": ["alt+shift+up"], "command": "select_lines", "args": {"forward": false} },
+  { "keys": ["alt+shift+down"], "command": "select_lines", "args": {"forward": true} },
+  { "keys": ["ctrl+space"], "command": "run_all_ruby_test",
+      "context": [
+        { "key": "selector", "operator": "equal", "operand": "source.ruby, source.rspec, text.gherkin.feature" }
+      ]
+  }
+]

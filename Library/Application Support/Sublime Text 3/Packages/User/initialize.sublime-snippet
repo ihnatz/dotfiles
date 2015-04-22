@@ -1,0 +1,8 @@
+<snippet>
+  <content>
+def initialize(${1:variables})
+  ${1}
+end
+</content>
+  <tabTrigger>init</tabTrigger>
+</snippet>

@@ -1,0 +1,69 @@
+[user]
+	name = Ignat Zakrevsky
+	email = iezakrevsky@gmail.com
+
+[alias]
+  co        = checkout
+  unstage   = reset HEAD
+  undo      = reset --soft HEAD^
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+  lol       = log --pretty=oneline --abbrev-commit --graph --decorate
+  conflicts = !git ls-files --unmerged | cut -c51- | sort -u | xargs $EDITOR
+  resolve   = !git ls-files --unmerged | cut -c51- | sort -u | xargs git add
+  unpushed  = cherry -v
+  upstream  = rev-parse --symbolic-full-name --abbrev-ref HEAD@{upstream}
+  amend     = commit --amend
+[core]
+  excludesfile = ~/.gitignore
+  editor       = vim
+  autocrlf = input
+  ignorecase = true
+[help]
+  autocorrect = 1
+[apply]
+  whitespace = nowarn
+[push]
+  default = current
+[branch]
+  autosetupmerge  = true
+  autosetuprebase = always
+  mergeoptions    = --no-ff
+[status]
+  relativePaths = true
+[format]
+  pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
+[color]
+  diff   = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui     = auto
+[color "status"]
+  added     = green
+  changed   = red
+  untracked = yellow
+[color "diff"]
+  meta = blue bold reverse
+  frag = magenta bold
+  old  = red bold
+  new  = green bold
+[difftool]
+  prompt = false
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+  tool = Kaleidoscope
+[pull]
+	rebase = true
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustexitcode = true
+[merge]
+	tool = Kaleidoscope
+[mergetool]
+	prompt = false
+[credential]
+	helper = osxkeychain

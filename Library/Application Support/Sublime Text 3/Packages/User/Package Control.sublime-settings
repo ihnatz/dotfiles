@@ -1,0 +1,42 @@
+{
+	"focus_change_mode": true,
+	"git_binary": "",
+	"ignore_whitespace": "none",
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"Alignment",
+		"All Autocomplete",
+		"Better CoffeeScript",
+		"Better RSpec",
+		"BracketHighlighter",
+		"Case Conversion",
+		"Color Highlighter",
+		"CTags",
+		"Cucumber",
+		"CursorRuler",
+		"Emmet",
+		"Gherkin (Cucumber) Formatter",
+		"Git",
+		"GitGutter",
+		"Gitignored File Excluder",
+		"Handlebars",
+		"Monokai Extended",
+		"Package Control",
+		"RailsCasts Colour Scheme",
+		"RSpec",
+		"Rspecer",
+		"Ruby Slim",
+		"RubyTest",
+		"Sass",
+		"Tomorrow Color Schemes",
+		"VAlign"
+	],
+	"live_mode": true,
+	"non_blocking": false,
+	"patience": true,
+	"show_markers_on_untracked_file": true
+}
