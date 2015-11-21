@@ -5,8 +5,8 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-# ZSH_THEME="geoffgarside"
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="lambda"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -16,8 +16,6 @@ alias e='exec'
 alias bi="bundle install"
 alias s='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias j='jobs'
-alias spec="bundle exec rspec"
-alias mkdir='mkdir -p'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -88,6 +86,7 @@ export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/.bin:$PATH
 export PATH=~/.rbenv/versions/2.1.0/bin:$PATH
 
+bindkey '^R' history-incremental-search-backward
 
 ctags=/usr/local/bin/ctags
 eval "$(rbenv init -)"
