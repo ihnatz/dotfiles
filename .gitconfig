@@ -17,6 +17,8 @@
   excludesfile = ~/.gitignore
   editor       = vim
   autocrlf = input
+  whitespace = space-before-tab, trailing-space
+  trustctime = false
   ignorecase = true
 [help]
   autocorrect = 1
