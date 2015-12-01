@@ -26,13 +26,16 @@ Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'skalnik/vim-vroom'
 Plugin 'vim-scripts/gitignore'
+Plugin 'elzr/vim-json'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'sjl/badwolf'
 call vundle#end()
 
 filetype plugin indent on
 
 syntax enable
 set background=dark
-colorscheme Tomorrow-Night
+colorscheme badwolf
 
 set showcmd
 set history=1000
@@ -44,7 +47,10 @@ set tabstop=2
 set shiftwidth=2
 set backspace=2
 set shiftround
+set cursorline
 set expandtab
+set wildmenu
+set lazyredraw
 
 set list listchars=tab:->,trail:·
 
@@ -95,22 +101,12 @@ autocmd FileAppendPre * :call TrimWhiteSpace()
 autocmd FilterWritePre * :call TrimWhiteSpace()
 autocmd BufWritePre * :call TrimWhiteSpace()
 
-nnoremap <C-left> :vertical resize +3<cr>
-nnoremap <C-down> :resize +3<cr>
-nnoremap <C-up> :resize -3<cr>
-nnoremap <C-right> :vertical resize -3<cr>
-
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 let g:ctrlp_use_caching = 0
 
 map q: :q
 
-" …also, Insert Mode as bpry<space>
 iabbr bpry require'pry';binding.pry
-" " And admit that the typos happen:
-iabbr bpry require'pry';binding.pry
-
-set guifont=Menlo\ Regular:h16
 
 " Open CtrlP filen in new tab
 let g:ctrlp_prompt_mappings = {
