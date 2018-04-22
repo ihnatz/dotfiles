@@ -1,6 +1,7 @@
 [user]
   name = Ignat Zakrevsky
   email = iezakrevsky@gmail.com
+  signingkey = 7450FA6BFCBB239F
 
 [alias]
   co        = checkout
@@ -19,6 +20,8 @@
   whitespace = nowarn
 [push]
   default = current
+[merge]
+  conflictstyle = diff3
 [branch]
   autosetupmerge  = true
   autosetuprebase = always
@@ -48,3 +51,13 @@
   rebase = true
 [credential]
   helper = osxkeychain
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
+[filter "media"]
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
+[commit]
+  gpgsign = true

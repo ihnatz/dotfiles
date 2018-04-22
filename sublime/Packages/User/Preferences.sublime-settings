@@ -1,68 +1,48 @@
 {
-	"color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night.tmTheme",
+	"added_words":
+	[
+		"unconfigurable"
+	],
+	"binary_file_patterns":
+	[
+		"*.jpg",
+		"*.jpeg",
+		"*.png",
+		"*.gif",
+		"*.ttf",
+		"*.tga",
+		"*.dds",
+		"*.ico",
+		"*.eot",
+		"*.pdf",
+		"*.swf",
+		"*.jar",
+		"*.zip",
+		".rspec_status",
+		".bundle/**",
+		"coverage/**",
+		"vendor/**",
+		"deps/**",
+		"node_modules/**",
+		"bower_components/**",
+		"public/**",
+		"log/**",
+		"tmp/**",
+		"_build/dev/**",
+		"_build/test/**",
+		"_gh_pages/**",
+		".sass-cache/**"
+	],
+	"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
 	"draw_white_space": "all",
-	"extra_file_exclude_patterns":
+	"ensure_newline_at_eof_on_save": true,
+	"find_selected_text": true,
+	"font_face": "Source Code Pro",
+	"font_options":
 	[
-		"*.pyc",
-		"*.pyo",
-		"*.exe",
-		"*.dll",
-		"*.obj",
-		"*.o",
-		"*.a",
-		"*.lib",
-		"*.so",
-		"*.dylib",
-		"*.ncb",
-		"*.sdf",
-		"*.suo",
-		"*.pdb",
-		"*.idb",
-		".DS_Store",
-		"*.class",
-		"*.psd",
-		"*.db",
-		"*.sublime-workspace"
+		"gray_antialias"
 	],
-	"extra_folder_exclude_patterns":
-	[
-		".svn",
-		".git",
-		".hg",
-		"CVS"
-	],
-	"file_exclude_patterns":
-	[
-		"*.pyc",
-		"*.pyo",
-		"*.exe",
-		"*.dll",
-		"*.obj",
-		"*.o",
-		"*.a",
-		"*.lib",
-		"*.so",
-		"*.dylib",
-		"*.ncb",
-		"*.sdf",
-		"*.suo",
-		"*.pdb",
-		"*.idb",
-		".DS_Store",
-		"*.class",
-		"*.psd",
-		"*.db",
-		"*.sublime-workspace"
-	],
-	"folder_exclude_patterns":
-	[
-		".svn",
-		".git",
-		".hg",
-		"CVS"
-	],
-	"font_face": "Fira Code",
-	"font_size": 16,
+	"font_size": 17,
 	"git_command": "/usr/bin/git",
 	"highlight_line": true,
 	"ignored_packages":
@@ -76,8 +56,11 @@
 		120,
 		80
 	],
+	"spell_check": true,
+	"tab_size": 2,
+	"theme": "Afterglow-blue.sublime-theme",
 	"trailing_spaces_include_current_line": false,
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"word_wrap": true
+	"word_wrap": false
 }

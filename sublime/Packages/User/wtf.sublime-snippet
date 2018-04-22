@@ -1,0 +1,8 @@
+<snippet>
+  <content>
+    puts "*" * 80
+    puts caller
+    puts "*" * 80
+  </content>
+  <tabTrigger>wtf</tabTrigger>
+</snippet>

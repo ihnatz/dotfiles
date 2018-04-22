@@ -1,23 +1,20 @@
 set nocompatible
+set completeopt-=preview
 filetype off
 
+set guifont=Source\ Code\ Pro:h18
 set rtp+=~/.vim/bundle/Vundle.vim/
 
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Plugin 'tpope/vim-endwise'
-Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-fugitive'
-Plugin 'vim-scripts/tComment'
-Plugin 'bling/vim-airline'
-Plugin 'osyo-manga/vim-over'
 Plugin 'sunaku/vim-ruby-minitest'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-rails'
@@ -28,14 +25,18 @@ Plugin 'skalnik/vim-vroom'
 Plugin 'vim-scripts/gitignore'
 Plugin 'elzr/vim-json'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'fatih/vim-go'
+Plugin 'thoughtbot/vim-rspec'
 Plugin 'sjl/badwolf'
+Plugin 'morhetz/gruvbox'
+Plugin 'AndrewRadev/deleft.vim'
 call vundle#end()
 
 filetype plugin indent on
 
 syntax enable
 set background=dark
-colorscheme badwolf
+colorscheme Tomorrow-Night
 
 set showcmd
 set history=1000
@@ -52,7 +53,7 @@ set expandtab
 set wildmenu
 set lazyredraw
 
-set list listchars=tab:->,trail:·
+set list listchars=tab:>-,trail:·
 
 set hidden
 
@@ -81,13 +82,6 @@ set autoindent
 set incsearch
 set laststatus=2
 
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-let NERDTreeShowHidden=1
-let NERDTreeIgnore = ['\.git$', '\.DS_Store$', '\.bundle$']
-let g:NERDTreeWinSize = 30
-let g:nerdtree_tabs_focus_on_files = 1
-
 set wildignore+=*/tmp/*,*/.tmp/*,*.so,*.swp,*.zip
 set wildignore+=*/.git/*,*/log/*,*/coverage/*
 
@@ -108,15 +102,43 @@ map q: :q
 
 iabbr bpry require'pry';binding.pry
 
-" Open CtrlP filen in new tab
-let g:ctrlp_prompt_mappings = {
-    \ 'AcceptSelection("e")': ['<c-t>'],
-    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
-    \ }
-
 set shell=/bin/zsh\ -l
 
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 
+" Map cursor for insert mode
+let &t_SI .= "\<Esc>[5 q"
+" solid block
+let &t_EI .= "\<Esc>[2 q"
+" 1 or 0 -> blinking block
+" 3 -> blinking underscore
+" Recent versions of xterm (282 or above) also support
+" 5 -> blinking vertical bar
+" 6 -> solid vertical bar
+"
+
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+let g:rspec_command = "!bundle exec rspec --drb {spec}"
+let g:rspec_runner = "os_x_iterm2"
+
+set term=xterm-256color
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+let loaded_matchparen=1 " Don't load matchit.vim (paren/bracket matching)
+set noshowmatch         " Don't match parentheses/brackets
+set nocursorline        " Don't paint cursor line
+set nocursorcolumn      " Don't paint cursor column
+set lazyredraw          " Wait to redraw
+set scrolljump=8        " Scroll 8 lines at a time at bottom/top
+let html_no_rendering=1 " Don't render italic, bold, links in HTML
