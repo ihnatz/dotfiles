@@ -1,8 +1,9 @@
 <snippet>
-  <content>
-    puts "*" * 80
-    puts caller
-    puts "*" * 80
-  </content>
+<content>
+puts "*" * 80
+puts caller
+puts "*" * 80
+</content>
   <tabTrigger>wtf</tabTrigger>
+  <scope>source.ruby</scope>
 </snippet>

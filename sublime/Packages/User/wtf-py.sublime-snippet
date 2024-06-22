@@ -1,0 +1,9 @@
+<snippet>
+<content>
+print("*" * 80)
+import traceback; traceback.print_stack()
+print("*" * 80)
+</content>
+  <tabTrigger>wtf</tabTrigger>
+  <scope>source.python</scope>
+</snippet>
