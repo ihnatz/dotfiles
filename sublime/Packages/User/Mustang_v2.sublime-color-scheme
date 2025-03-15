@@ -1,0 +1,227 @@
+{
+    "name": "Mustang",
+    "author": "Updated from hcalves theme",
+    "variables": {},
+    "globals": {
+        "background": "#212121",
+        "foreground": "#E2E2E5",
+        "caret": "#888888",
+        "invisibles": "#303030",
+        "line_highlight": "#2d2d2d",
+        "selection": "#404040",
+        "selection_foreground": "#b6c7f3",
+        "find_highlight": "#404040",
+        "find_highlight_foreground": "#b6c7f3"
+    },
+    "rules": [
+        {
+            "name": "Comment",
+            "scope": "comment",
+            "font_style": "italic",
+            "foreground": "#808080"
+        },
+        {
+            "name": "Constant",
+            "scope": "constant",
+            "foreground": "#ffad33"
+        },
+        {
+            "name": "Entity",
+            "scope": "entity",
+            "foreground": "#FFFFFF"
+        },
+        {
+            "name": "Keyword",
+            "scope": "keyword",
+            "foreground": "#7E8AA2"
+        },
+        {
+            "name": "Storage",
+            "scope": "storage",
+            "foreground": "#7E8AA2"
+        },
+        {
+            "name": "String",
+            "scope": "string",
+            "foreground": "#b9da46"
+        },
+        {
+            "name": "Support",
+            "scope": "support",
+            "foreground": "#FAF4C6"
+        },
+        {
+            "name": "Variable",
+            "scope": "variable",
+            "foreground": "#E2E2E5"
+        },
+        {
+            "name": "Invalid - Deprecated",
+            "scope": "invalid.deprecated",
+            "font_style": "italic underline",
+            "foreground": "#A2807E"
+        },
+        {
+            "name": "Invalid - Illegal",
+            "scope": "invalid.illegal",
+            "background": "#562D56BF",
+            "foreground": "#F8F8F8"
+        },
+        {
+            "name": "Embedded Source",
+            "scope": "text source",
+            "background": "#252525"
+        },
+        {
+            "name": "Embedded Source (Bright)",
+            "scope": "text.html.ruby source",
+            "background": "#2A2A2A"
+        },
+        {
+            "name": "Entity inherited-class",
+            "scope": "entity.other.inherited-class",
+            "font_style": "italic",
+            "foreground": "#7e8aa2"
+        },
+        {
+            "name": "String embedded-source",
+            "scope": "string source",
+            "foreground": "#DAEFA3"
+        },
+        {
+            "name": "String constant",
+            "scope": "string constant",
+            "foreground": "#ffad33"
+        },
+        {
+            "name": "String.regexp",
+            "scope": "string.regexp",
+            "foreground": "#7E8AA2"
+        },
+        {
+            "name": "String.regexp.special",
+            "scope": "string.regexp constant.character.escape, string.regexp source.ruby.embedded, string.regexp string.regexp.arbitrary-repitition",
+            "foreground": "#ffad33"
+        },
+        {
+            "name": "String variable",
+            "scope": "string variable",
+            "foreground": "#E2E2E5"
+        },
+        {
+            "name": "Support function",
+            "scope": "support.function",
+            "foreground": "#FFFFFF"
+        },
+        {
+            "name": "Support constant",
+            "scope": "support.constant",
+            "foreground": "#FFFFFF"
+        },
+        {
+            "name": "C/C++ Preprocessor Line",
+            "scope": "meta.preprocessor.c",
+            "foreground": "#7E8AA2"
+        },
+        {
+            "name": "C/C++ Preprocessor Directive",
+            "scope": "meta.preprocessor.c keyword",
+            "foreground": "#ffad33"
+        },
+        {
+            "name": "Doctype/XML Processing",
+            "scope": "meta.tag.sgml.doctype, meta.tag.sgml.doctype entity, meta.tag.sgml.doctype string, meta.tag.preprocessor.xml, meta.tag.preprocessor.xml entity, meta.tag.preprocessor.xml string",
+            "foreground": "#ffad33"
+        },
+        {
+            "name": "Meta tag",
+            "scope": "declaration.tag, declaration.tag entity, meta.tag, meta.tag entity",
+            "foreground": "#7E8AA2"
+        },
+        {
+            "name": "Meta tag inline",
+            "scope": "declaration.tag.inline, declaration.tag.inline entity, source entity.name.tag, source entity.other.attribute-name, meta.tag.inline, meta.tag.inline entity",
+            "foreground": "#7E8AA2"
+        },
+        {
+            "name": "CSS tag-name",
+            "scope": "meta.selector.css entity.name.tag",
+            "foreground": "#7E8AA2"
+        },
+        {
+            "name": "CSS pseudo-class",
+            "scope": "meta.selector.css entity.other.attribute-name.tag.pseudo-class",
+            "foreground": "#E2E2E5"
+        },
+        {
+            "name": "CSS id",
+            "scope": "meta.selector.css entity.other.attribute-name.id",
+            "foreground": "#7E8AA2"
+        },
+        {
+            "name": "CSS class",
+            "scope": "meta.selector.css entity.other.attribute-name.class",
+            "foreground": "#7E8AA2"
+        },
+        {
+            "name": "CSS property-name",
+            "scope": "support.type.property-name.css",
+            "foreground": "#E2E2E5"
+        },
+        {
+            "name": "CSS property-value",
+            "scope": "meta.property-group support.constant.property-value.css, meta.property-value support.constant.property-value.css",
+            "foreground": "#B1D631"
+        },
+        {
+            "name": "CSS @at-rule",
+            "scope": "meta.preprocessor.at-rule keyword.control.at-rule",
+            "foreground": "#ffad33"
+        },
+        {
+            "name": "CSS additional-constants",
+            "scope": "meta.property-value support.constant.named-color.css, meta.property-value constant",
+            "foreground": "#ffad33"
+        },
+        {
+            "name": "CSS constructor argument",
+            "scope": "meta.constructor.argument.css",
+            "foreground": "#8F9D6A"
+        },
+        {
+            "name": "Diff header",
+            "scope": "meta.diff, meta.diff.header, meta.separator",
+            "background": "#0E2231",
+            "font_style": "italic",
+            "foreground": "#E2E2E5"
+        },
+        {
+            "name": "Diff deleted",
+            "scope": "markup.deleted",
+            "background": "#361f1f",
+            "foreground": "#E2E2E5"
+        },
+        {
+            "name": "Diff changed",
+            "scope": "markup.changed",
+            "background": "#1d2638",
+            "foreground": "#E2E2E5"
+        },
+        {
+            "name": "Diff inserted",
+            "scope": "markup.inserted",
+            "background": "#1d381e",
+            "foreground": "#E2E2E5"
+        },
+        {
+            "name": "Markup List",
+            "scope": "markup.list",
+            "foreground": "#FAF4C6"
+        },
+        {
+            "name": "Markup Heading",
+            "scope": "markup.heading",
+            "foreground": "#E2E2E5"
+        }
+    ]
+}
